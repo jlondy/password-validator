@@ -32,4 +32,44 @@ public class Validator {
             return true;
         }
     }
+    //has special character
+    public boolean hasSpec(){
+        int size=password.length();
+        for(int i=0; i<size; i++){
+            char next= password.charAt(i);
+            if((!Character.isLetter(next)) && (!Character.isDigit(next)) && (next!=' ')){
+                return true;
+            }
+        }
+        return false;
+    }
+    //has digit
+    public boolean hasDigit(){
+        int size=password.length();
+        for(int i=0; i<size; i++){
+            char next= password.charAt(i);
+            if(Character.isDigit(next)){
+                return true;
+            }
+        }
+        return false;
+    }
+    //has lower and upper case
+    public boolean hasLowerAndUpper(){
+        int count=0;
+        int size=password.length();
+        for(int i=0; i<size; i++){
+            char next= password.charAt(i);
+            if(Character.isLowerCase(next) && count==0){
+                count++;
+            }
+            if(Character.isUpperCase(next)){
+                count++;
+            }
+            if(count==2){
+                return true;
+            }
+        }
+        return false;
+    }
 }

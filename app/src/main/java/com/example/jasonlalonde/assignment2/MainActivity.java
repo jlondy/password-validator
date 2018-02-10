@@ -30,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
                 if(myValidator.isCorrect()){
                     count++;
                 }
+                if(myValidator.hasDigit()){
+                    count++;
+                }
+                if(myValidator.hasLowerAndUpper()){
+                    count++;
+                }
+                if(myValidator.hasSpec()){
+                    count++;
+                }
                 if(count==5){
                     output.setText("Very Strong");
                 }

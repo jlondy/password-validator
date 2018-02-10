@@ -41,4 +41,22 @@ public class validatorTest {
         Validator myVal = new Validator(s);
         assertTrue(myVal.isCorrect());
     }
+    @Test
+    public void testHasSpec() throws Exception {
+        String s="HasASpecialChar$";
+        Validator myVal = new Validator(s);
+        assertTrue(myVal.hasSpec());
+    }
+    @Test
+    public void testHasDigit() throws Exception {
+        String s="HasADigit8";
+        Validator myVal = new Validator(s);
+        assertTrue(myVal.hasDigit());
+    }
+    @Test
+    public void testHasLowerAndUpper() throws Exception {
+        String s="HasALowerCaseAndUpperCaseLetter";
+        Validator myVal = new Validator(s);
+        assertTrue(myVal.hasLowerAndUpper());
+    }
 }
