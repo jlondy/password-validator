@@ -24,21 +24,27 @@ public class MainActivity extends AppCompatActivity {
                 output= (TextView) findViewById(R.id.prompt);
                 String myString= input.getText().toString();
                 Validator myValidator= new Validator(myString);
+                //length method
                 if(myValidator.isLength()){
                     count++;
                 }
+                //correct method
                 if(myValidator.isCorrect()){
                     count++;
                 }
+                //digit method
                 if(myValidator.hasDigit()){
                     count++;
                 }
+                //caps method
                 if(myValidator.hasLowerAndUpper()){
                     count++;
                 }
+                //special char method
                 if(myValidator.hasSpec()){
                     count++;
                 }
+                //strength of password
                 if(count==5){
                     output.setText("Very Strong");
                 }
